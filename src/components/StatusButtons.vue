@@ -16,10 +16,14 @@ interface Props {
 
 export default defineComponent({
   props: {
-    book: Object
+    book: {
+      type: Object,
+      default: () => ({})
+    }
   },
   setup(props: Props) {
     const { book } = props
+
     const {
       addFinishedBooks,
       removeFinishedBooks,

@@ -7,3 +7,7 @@
 
 * [Vue Composition API | GitHub](https://github.com/vuejs/composition-api)
 * [Vue Composition API | 文档](https://composition-api.vuejs.org/)
+
+## 心得
+
+> *还是不能领悟其精髓的啊（2020-4-27）*
