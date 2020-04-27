@@ -2,6 +2,7 @@
   <section class="wrap">
     <span v-if="loading">正在加载中...</span>
     <section v-else class="content">
+      <Book v-for="book in pagedBooks" :key="book.id" :book="book" />
       <el-pagination
         class="pagination"
         v-if="pagedBooks.length"
@@ -11,16 +12,17 @@
         @current-change="bindings.currentChange"
       />
     </section>
+    <slot name="tips"></slot>
   </section>
 </template>
 
 <script lang="ts">
-import { createComponent } from "@vue/composition-api"
+import { defineComponent } from "@vue/composition-api"
 import { Books } from "@/types"
 import Book from "./Book.vue"
 import { usePages } from "@/hooks"
 
-export default createComponent({
+export default defineComponent({
   name: "books",
   setup(props) {
     const pageSize = 10

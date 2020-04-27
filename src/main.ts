@@ -5,10 +5,14 @@ import "@/styles/element-variables.scss"
 import { useProvider } from "@/context"
 import App from "./App.vue"
 import router from "./router"
+import * as colors from "./styles/colors"
+import "@/styles/global.css"
 
 Vue.use(VueCompositionApi)
 Vue.component(Pagination.name, Pagination)
 Vue.config.productionTip = false
+
+Vue.prototype.colors = colors
 
 new Vue({
   router,
